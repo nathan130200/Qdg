@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Controle do Gás</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_atualizar">Atualizar</string>
+</resources>

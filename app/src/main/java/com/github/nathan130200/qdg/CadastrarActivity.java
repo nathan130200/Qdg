@@ -45,8 +45,11 @@ public class CadastrarActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         if(v.getId() == R.id.btnCadastrarItem){
             try {
+                Calendar cal = Calendar.getInstance();
+                cal.set(dpData.getYear(), dpData.getMonth(), dpData.getDayOfMonth());
+                
                 Item item = new Item();
-                item.setTimestamp(Calendar.getInstance().getTimeInMillis());
+                item.setTimestamp(cal.getTimeInMillis());
                 item.setValor(tbValor.getCurrencyDouble());
     
                 new InserirTask(this)

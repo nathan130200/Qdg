@@ -50,7 +50,7 @@ public class Item {
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(timestamp);
     
-        return new SimpleDateFormat("dd/MM/yyy HH:mm:ss")
+        return new SimpleDateFormat("dd/MM/yyy")
                 .format(cal.getTime());
     }
 }

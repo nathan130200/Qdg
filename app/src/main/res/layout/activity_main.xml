@@ -30,17 +30,23 @@
         android:id="@+id/tvItems"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:stretchColumns="1">
+        android:stretchColumns="*">
 
         <TableRow android:id="@+id/trMainRow">
             <TextView android:text="#"
-
+                android:textAlignment="center"
                 android:padding="10dp" />
 
             <TextView android:text="Data"
+                android:textAlignment="center"
                 android:padding="10dp" />
 
             <TextView android:text="Valor"
+                android:textAlignment="center"
+                android:padding="10dp" />
+
+            <TextView android:text="Ação"
+                android:textAlignment="center"
                 android:padding="10dp" />
         </TableRow>
 

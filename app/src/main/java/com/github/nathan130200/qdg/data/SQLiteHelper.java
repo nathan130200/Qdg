@@ -31,6 +31,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists qdg_item");
     }
     
+    public void remover(int id){
+        this.getWritableDatabase().delete("qdg_item", "id == ?", new String[]{ Integer.toString(id) });
+    }
+    
     public boolean cadastrar(Item item){
         ContentValues cv = new ContentValues();
         cv.put("valor", item.getValor());

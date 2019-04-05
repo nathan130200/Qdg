@@ -1,55 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".CadastrarActivity"
-    android:scrollbars="vertical">
-
-    <DatePicker
-        android:id="@+id/dpData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:datePickerMode="spinner"
-        android:paddingBottom="10dp"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:background="#FF909090" />
+    tools:context=".CadastrarActivity">
 
     <LinearLayout
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="40dp"
-            android:textSize="32dp"
-            android:layout_height="wrap_content"
-            android:text="R$"/>
+            <DatePicker
+                android:id="@+id/dpData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:paddingBottom="10dp"/>
 
-        <faranjit.currency.edittext.CurrencyEditText
-            android:layout_width="match_parent"
-            android:inputType="numberDecimal"
-            app:locale="pt_BR"
-            android:layout_height="wrap_content"
-            android:id="@+id/tbValor"
-            android:textAlignment="center"
-            android:text="0,00"
-            android:textSize="32dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:textSize="32dp"
+                    android:layout_height="wrap_content"
+                    android:text="R$"/>
+
+                <faranjit.currency.edittext.CurrencyEditText
+                    android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
+                    app:locale="pt_BR"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tbValor"
+                    android:textAlignment="center"
+                    android:text="0,00"
+                    android:textSize="32dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCadastrarItem"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="22dp"
+                android:text="@string/btn_cadastrar"/>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnCadastrarItem"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textSize="22dp"
-        android:text="@string/btn_cadastrar"/>
-
-</LinearLayout>
+</ScrollView>

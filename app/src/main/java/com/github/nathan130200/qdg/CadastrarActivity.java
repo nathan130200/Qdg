@@ -3,6 +3,7 @@ package com.github.nathan130200.qdg;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,6 +33,12 @@ public class CadastrarActivity extends AppCompatActivity implements View.OnClick
         tbValor = findViewById(R.id.tbValor);
         btnCadastrarItem = findViewById(R.id.btnCadastrarItem);
         btnCadastrarItem.setOnClickListener(this);
+    }
+    
+    @Override
+    public void finish() {
+        Intent it = new Intent(this, MainActivity.class);
+        startActivityForResult(it, 1200);
     }
     
     @Override
